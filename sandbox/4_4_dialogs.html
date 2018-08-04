@@ -10,16 +10,13 @@
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-  </style>
-
   <title>Materialize Sandbox</title>
 </head>
 
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">The Grid System</h1>
+      <h1 class="center-align">Toasts & Tooltip Dialogs</h1>
     </div>
   </div>
   <div class="container">
@@ -127,25 +124,23 @@
 
     <!-- START HERE -->
 
-    <!-- 12 1 COLUMNS -->
+    <!-- TOAST BUTTON -->
+    <a id="toast1" class="btn">Show Toast</a>
 
+    <!-- ROUNDED TOAST -->
+    <a id="toast2" class="btn">Rounded Toast</a>
 
-    <!-- 3 4 COLUMNS -->
+    <!-- CALLBACK ON DISMISS -->
+    <a id="toast3" class="btn">Toast With Callback</a>
 
+    <br>
+    <br>
 
-    <!-- 2 6 COLUMNS -->
-
-
-    <!-- 8 & 4 COLUMNS -->
-
-
-    <!-- RESPONSIVE GRIDS / SPECIFIC SCREEN SIZES -->
-
-
-    <!-- PUSH & PULL -->
-
-
-    <!-- OFFSETS -->
+    <!-- TOOLTIPS -->
+    <a class="btn tooltipped" data-delay="2000" data-position="bottom" data-tooltip="I am a tooltip">Bottom Tooltip</a>
+    <a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">Top Tooltip</a>
+    <a class="btn tooltipped" data-position="right" data-tooltip="I am a tooltip">Right Tooltip</a>
+    <a class="btn tooltipped" data-position="left" data-tooltip="I am a tooltip">Left Tooltip</a>
 
 
     <!-- END HERE -->
@@ -171,8 +166,24 @@
 
       // JAVASCRIPT START HERE //
 
+      // Run toast
+      $('#toast1').click(function () {
+        Materialize.toast('I am toast', 3000);
+      })
 
+      // Rounded toast
+      $('#toast2').click(function () {
+        Materialize.toast('I am toast', 3000, 'rounded');
+      })
 
+      // Toast callback
+      $('#toast3').click(function () {
+        Materialize.toast('I am toast', 3000, 'rounded', function () {
+          alert('Toast dismissed!');
+        });
+      })
+
+      Materialize.toast.removeAll()
 
     });
   </script>

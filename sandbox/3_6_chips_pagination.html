@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Carousel</h1>
+      <h1 class="center-align">Chips & Pagination</h1>
     </div>
   </div>
   <div class="container">
@@ -124,76 +124,79 @@
 
     <!-- START HERE -->
 
-    <!-- CAROUSEL -->
-    <div>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
+    <!-- CHIPS -->
+    <div class="chip">
+      Web development
+    </div>
+    <div class="chip">
+      Web design
+    </div>
+    <div class="chip">
+      Programming
     </div>
 
-    <!-- FULL WIDTH CAROUSEL -->
-    <div>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
+    <br>
+    <br>
+
+    <!-- CHIPS WITH CLOSE -->
+    <div class="chip">
+      Web development
+      <i class="close material-icons">close</i>
+    </div>
+    <div class="chip">
+      Web design
+      <i class="close material-icons">close</i>
+    </div>
+    <div class="chip">
+      Programming
+      <i class="close material-icons">close</i>
     </div>
 
-    <!-- CONTENT SLIDER -->
-    <div>
-      <div href="">
-        <h2>Panel One</h2>
-        <p>This is panel one</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
-      <div href="">
-        <h2>Panel Two</h2>
-        <p>This is panel two</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
-      <div href="">
-        <h2>Panel Three</h2>
-        <p>This is panel three</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
-      <div href="">
-        <h2>Panel Four</h2>
-        <p>This is panel four</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
+    <br>
+    <br>
+
+    <!-- CHIPS WITH IMAGES -->
+    <div class="chip">
+      <img src="img/img1.jpg"> John Doe
+    </div>
+    <div class="chip">
+      <img src="img/img2.jpg"> Brian Jackson
+    </div>
+    <div class="chip">
+      <img src="img/img3.jpg"> Lori Smith
     </div>
 
+    <!-- CHIPS INPUT WITH AUTOCOMPLETE-->
+    <div class="chips-input"></div>
+
+    <!-- PAGINATION -->
+    <ul class="pagination">
+      <li class="disabled">
+        <a href="#!">
+          <i class="material-icons">chevron_left</i>
+        </a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">1</a>
+      </li>
+      <li class="waves-effect active">
+        <a href="#!">2</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">3</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">4</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">5</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </li>
+    </ul>
 
     <!-- END HERE -->
 
@@ -217,9 +220,21 @@
       });
 
       // JAVASCRIPT START HERE //
+      $('.chips-input').material_chip({
+        placeholder: 'Enter a tag',
+        secondaryPlaceholder: '+tag',
+        autocompleteOptions: {
+          data: {
+            'html': null,
+            'css': null,
+            'javascript': null
+          }
+        }
+      });
 
-
-
+      $('.chips-input').on('chip.add', function (e, chip) {
+        console.log(`You added a chip - ${chip.tag}`)
+      })
 
     });
   </script>

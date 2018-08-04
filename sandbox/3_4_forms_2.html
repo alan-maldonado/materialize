@@ -11,12 +11,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Materialize Sandbox</title>
+  <style>
+    .input-field {
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Tables & Media</h1>
+      <h1 class="center-align">Fancy Form & Input</h1>
     </div>
   </div>
   <div class="container">
@@ -123,109 +128,77 @@
     <br>
 
     <!-- START HERE -->
+    <form>
+      <!-- SWITCH -->
+      <div class="switch">
+        <label>
+          Disable
+          <input type="checkbox" checked>
+          <span class="lever"></span>
+          Enable
+        </label>
+      </div>
 
-    <!-- TABLE -->
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>John Doe</th>
-          <th>jdoe@gmail.com</th>
-          <th>New York</th>
-        </tr>
-        <tr>
-          <th>Bob Johnson</th>
-          <th>bob@yahoo.com</th>
-          <th>Boston</th>
-        </tr>
-        <tr>
-          <th>Karen Williams</th>
-          <th>karen@yahoo.com</th>
-          <th>Miami</th>
-        </tr>
-      </tbody>
-    </table>
+      <!-- DISABLED SWITCH -->
+      <div class="switch">
+        <label>
+          Disable
+          <input type="checkbox">
+          <span class="lever"></span>
+          Enable
+        </label>
+      </div>
 
-    <br>
-    <br>
+      <br>
+      <br>
 
-    <!-- STRIPED TABLE -->
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>John Doe</th>
-          <th>jdoe@gmail.com</th>
-          <th>New York</th>
-        </tr>
-        <tr>
-          <th>Bob Johnson</th>
-          <th>bob@yahoo.com</th>
-          <th>Boston</th>
-        </tr>
-        <tr>
-          <th>Karen Williams</th>
-          <th>karen@yahoo.com</th>
-          <th>Miami</th>
-        </tr>
-      </tbody>
-    </table>
+      <!-- FILE INPUT -->
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Upload File</span>
+          <input type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input type="text" class="file-path">
+        </div>
+      </div>
 
-    <br>
-    <br>
+      <!-- RANGE SLIDER -->
+      <p class="range-field">
+        <input type="range" min="0" max="100">
+      </p>
 
-    <!-- BORDERED, HIGHTLIGHTED & RESPONSIVE TABLE -->
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>John Doe</th>
-          <th>jdoe@gmail.com</th>
-          <th>New York</th>
-        </tr>
-        <tr>
-          <th>Bob Johnson</th>
-          <th>bob@yahoo.com</th>
-          <th>Boston</th>
-        </tr>
-        <tr>
-          <th>Karen Williams</th>
-          <th>karen@yahoo.com</th>
-          <th>Miami</th>
-        </tr>
-      </tbody>
-    </table>
+      <!-- DATE PICKER -->
+      <div class="input-field">
+        <input type="text" class="datepicker" id="date">
+        <label for="date">Choose a Date</label>
+      </div>
 
-    <br>
-    <br>
+      <!-- TIME PICKER -->
+      <div class="input-field">
+        <input type="text" class="timepicker" id="time">
+        <label for="time">Choose a Time</label>
+      </div>
 
-    <!-- RESPONSIVE IMAGE -->
+      <!-- CHARACTER COUNTER -->
+      <div class="input-field">
+        <input id="post" type="text" data-length="20">
+        <label for="post">Post</label>
+      </div>
 
+      <!-- AUTOCOMPLETE -->
+      <div class="input-field">
+        <input type="text" id="fruit" class="autocomplete">
+        <label for="fruit">Type a Fruit</label>
+      </div>
 
-    <!-- CIRLCE IMAGE -->
+      <br>
+      <br>
+      <div>
+        <input type="submit" value="Submit" class="btn">
+      </div>
+    </form>
 
-
-    <!-- RESPONSIVE VIDEO EMBED -->
-
-    <!-- RESPONSIVE VIDEO ELEMENT -->
 
 
     <!-- END HERE -->
@@ -251,8 +224,34 @@
 
       // JAVASCRIPT START HERE //
 
+      $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: 15,
+        today: 'Today',
+        closeOnSelect: true
+      });
 
+      $('.timepicker').pickatime({
+        default: 'now',
+        twelvehour: true,
+        donetext: 'ok',
+        cleartext: 'clear',
+        canceltext: 'cancel',
+        autoclose: true
+      });
 
+      $('.autocomplete').autocomplete({
+        data: {
+          'Apple': null,
+          'Orange': null,
+          'Banana': null,
+          'Grapes': null,
+          'Strawberries': null,
+          'Pears': null,
+          'Plumbs': null
+        },
+        limit: 20
+      })
 
     });
   </script>

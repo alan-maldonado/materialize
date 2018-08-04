@@ -4,8 +4,6 @@
 <head>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-    crossorigin="anonymous">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
@@ -18,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Buttons & Icons</h1>
+      <h1 class="center-align">SideNav</h1>
     </div>
   </div>
   <div class="container">
@@ -126,61 +124,46 @@
 
     <!-- START HERE -->
 
-    <!-- STANDARD BUTTON -->
-    <button>Read More</button>
-    <a>Read More</a>
+    <!-- SIDENAV -->
 
-    <!-- WAVES EFFECT -->
-    <button>Read More</button>
-    <a>Read More</a>
+    <ul id="slide-out" class="side-nav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="img/img4.jpg">
+          </div>
+          <a href="#">
+            <img class="circle" src="img/img5.jpg">
+          </a>
+          <a href="#">
+            <span class="white-text name">John Doe</span>
+          </a>
+          <a>
+            <span class="white-text email">jdoe@gmail.com</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a href="#">
+          <i class="material-icons">dashboard</i>Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Posts</a>
+      </li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li>
+        <a class="subheader" href="#">Account Info</a>
+      </li>
+      <li>
+        <a class="waves-effect" href="#">Logout</a>
+      </li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse">
+      <i class="material-icons">menu</i>
+    </a>
 
-    <!-- WAVE COLORS -->
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-
-    <br>
-    <br>
-
-    <!-- MATERIAL ICONS (https://material.io/icons) -->
-
-
-    <br>
-    <br>
-
-    <!-- ICON SIZES -->
-
-    <br>
-    <br>
-
-    <!-- BUTTON WITH MATERIAL ICON -->
-    <a href="#!">Buy Now</a>
-    <a href="#!">Buy Now</a>
-    <!-- BUTTON WITH FONT AWESOME ICON -->
-    <a href="#!">Buy Now</a>
-    <br>
-    <br>
-
-    <!-- COLORED BUTTONS -->
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-    <button>Read More</button>
-
-    <br>
-    <br>
-
-    <!-- LARGE BUTTON -->
-    <button>Large Button</button>
-    <!-- DISABLED BUTTON -->
-    <button>Disabled Button</button>
-
-    <br>
-    <br>
 
     <!-- END HERE -->
 
@@ -204,9 +187,18 @@
       });
 
       // JAVASCRIPT START HERE //
-
-
-
+      $('.button-collapse').sideNav({
+        menuWidth: 300,
+        edge: 'left',
+        closeOnClick: false,
+        draggable: true,
+        onOpen: function () {
+          console.log('menu open')
+        },
+        onClose: function () {
+          console.log('menu close')
+        }
+      });
 
     });
   </script>

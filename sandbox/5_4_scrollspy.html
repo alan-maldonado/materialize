@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Breadcrumbs & Footer</h1>
+      <h1 class="center-align">Scrollspy</h1>
     </div>
   </div>
   <div class="container">
@@ -122,34 +122,59 @@
     <br>
     <br>
 
-  </div>
-  <!-- ./ CONTAINER END -->
+    <!-- START HERE -->
 
-  <!-- START HERE -->
+    <!-- SCROLLSPY -->
+    <div class="row">
+      <div class="col m9 l10 s12">
+        <div id="who" class="section scrollspy">
+          <h4>Who Are We?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
+            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
+            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
+          </p>
+        </div>
 
-  <!-- BREADCRUMB -->
-  <nav>
-    <div>
-      <div>
-        <div>
-          <a href="#">Home</a>
-          <a href="#">Users</a>
-          <a href="#">Brad</a>
+        <div id="what" class="section scrollspy">
+          <h4>What Do We Do?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
+            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
+            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
+          </p>
+        </div>
+
+        <div id="where" class="section scrollspy">
+          <h4>Where Are We?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
+            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
+            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis, dolorem
+            excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati sequi
+            fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
+          </p>
         </div>
       </div>
+      <div class="col hide-on-small-only m3 l2 s12">
+        <ul class="pinned section table-of-contents">
+          <li>
+            <a href="#who">Who We Are</a>
+          </li>
+          <li>
+            <a href="#what">What We Do</a>
+          </li>
+          <li>
+            <a href="#where">Where We Are</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </nav>
+    <div style="margin-top:700px;"></div>
 
-  <br>
-  <br>
-
-  <!-- FOOTER -->
-  <footer>
-
-  </footer>
+    <!-- END HERE -->
 
 
-  <!-- END HERE -->
+  </div>
+  <!-- ./ CONTAINER END -->
 
 
 
@@ -166,10 +191,7 @@
         alignment: 'left'
       });
 
-      // JAVASCRIPT START HERE //
-
-
-
+      $('.scrollspy').scrollSpy();
 
     });
   </script>

@@ -11,17 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Materialize Sandbox</title>
-  <style>
-    .input-field {
-      margin-bottom: 30px;
-    }
-  </style>
 </head>
 
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Fancy Form & Input</h1>
+      <h1 class="center-align">Floating & Fixed Action Buttons</h1>
     </div>
   </div>
   <div class="container">
@@ -128,68 +123,83 @@
     <br>
 
     <!-- START HERE -->
-    <form>
-      <!-- SWITCH -->
-      <div>
 
-      </div>
+    <!-- FLOATING BUTTONS -->
+    <!-- <button class="btn-floating btn-large waves-effect waves-light red">
+      <i class="material-icons">add</i>
+    </button>
+    <a class="btn-floating btn-large waves-effect waves-light blue">
+      <i class="material-icons">edit</i>
+    </a> -->
+    <!-- PULSE EFFECT -->
+    <!-- <button class="btn-floating btn-large waves-effect waves-light green pulse">
+      <i class="material-icons">publish</i>
+    </button> -->
 
-      <!-- DISABLED SWITCH -->
-      <div>
+    <!-- SIMPLE FIXED ACTION BUTTON -->
+    <!-- <div class="fixed-action-btn">
+      <button class="btn-floating btn-large red">
+        <i class="material-icons">add</i>
+      </button>
+    </div> -->
 
-      </div>
+    <!-- FIXED ACTION BUTTON [horizontal, click-to-toggle] -->
+    <!-- <div class="fixed-action-btn horizontal click-to-toggle">
+      <a class="btn-floating btn-large red">
+        <i class="material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating red">
+            <i class="material-icons">insert_chart</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating blue">
+            <i class="material-icons">format_quote</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating yellow">
+            <i class="material-icons">publish</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating green">
+            <i class="material-icons">attach_file</i>
+          </a>
+        </li>
+      </ul>
+    </div> -->
 
-      <br>
-      <br>
-
-      <!-- FILE INPUT -->
-      <div>
-        <div>
-          <span>Upload File</span>
-          <input type="file">
-        </div>
-        <div>
-          <input type="text">
-        </div>
-      </div>
-
-      <!-- RANGE SLIDER -->
-      <p>
-        <input type="range">
-      </p>
-
-      <!-- DATE PICKER -->
-      <div>
-        <input type="text" id="date">
-        <label for="date">Choose a Date</label>
-      </div>
-
-      <!-- TIME PICKER -->
-      <div>
-        <input type="text" id="time">
-        <label for="time">Choose a Time</label>
-      </div>
-
-      <!-- CHARACTER COUNTER -->
-      <div>
-        <input id="post" type="text">
-        <label for="post">Post</label>
-      </div>
-
-      <!-- AUTOCOMPLETE -->
-      <div>
-        <input type="text" id="fruit">
-        <label for="fruit">Type a Fruit</label>
-      </div>
-
-      <br>
-      <br>
-      <div>
-        <input type="submit" value="Submit" class="btn">
-      </div>
-    </form>
-
-
+    <!-- FAB TOOLBAR -->
+    <div class="fixed-action-btn toolbar">
+      <a class="btn-floating btn-large red">
+        <i class="material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li class="waves-effect waves-light">
+          <a href="#!">
+            <i class="material-icons">insert_chart</i>
+          </a>
+        </li>
+        <li class="waves-effect waves-light">
+          <a href="#!">
+            <i class="material-icons">format_quote</i>
+          </a>
+        </li>
+        <li class="waves-effect waves-light">
+          <a href="#!">
+            <i class="material-icons">publish</i>
+          </a>
+        </li>
+        <li class="waves-effect waves-light">
+          <a href="#!">
+            <i class="material-icons">attach_file</i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <!-- END HERE -->
 
@@ -213,9 +223,11 @@
       });
 
       // JAVASCRIPT START HERE //
+      // $('.fixed-action-btn').openFAB();
+      // $('.fixed-action-btn').closeFAB();
 
-
-
+      // $('.fixed-action-btn').openToolbar();
+      // $('.fixed-action-btn').closeToolbar();
 
     });
   </script>

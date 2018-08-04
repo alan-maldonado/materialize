@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Collections & Badges</h1>
+      <h1 class="center-align">Carousel</h1>
     </div>
   </div>
   <div class="container">
@@ -124,118 +124,79 @@
 
     <!-- START HERE -->
 
-    <!-- COLLECTION -->
-    <ul>
-      <li>First Item</li>
-      <li>Second Item</li>
-      <li>Third Item</li>
-      <li>Fourth Item</li>
-    </ul>
+    <!-- CAROUSEL -->
 
-    <!-- COLLECTION AS LINKS -->
-    <div>
-      <a href="#">First Item</a>
-      <a href="#">Second Item</a>
-      <a href="#">Third Item</a>
-      <a href="#">Fourth Item</a>
-      <!-- BADGES -->
-      <a href="#!">
-        <span>44</span>Fifth Item</a>
-      <a href="#!">
-        <span>3</span>Sixth Item</a>
+    <div class="carousel carousel-simple">
+      <a class="carousel-item" href="#one!">
+        <img src="img/img1.jpg">
+      </a>
+      <a class="carousel-item" href="#two!">
+        <img src="img/img2.jpg">
+      </a>
+      <a class="carousel-item" href="#three!">
+        <img src="img/img3.jpg">
+      </a>
+      <a class="carousel-item" href="#four!">
+        <img src="img/img4.jpg">
+      </a>
+      <a class="carousel-item" href="#five!">
+        <img src="img/img5.jpg">
+      </a>
     </div>
 
-    <!-- WITH HEADER -->
-    <ul>
-      <li>
-        <h4>Items</h4>
-      </li>
-      <li>First Item</li>
-      <li>Second Item</li>
-      <li>Third Item</li>
-      <li>Fourth Item</li>
-    </ul>
 
-    <!-- SECONDARY CONTENT -->
-    <ul>
-      <li>
-        <h4>Items</h4>
-      </li>
-      <li>
-        <div>First Item
-          <a href="#">
-            <i>/i>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>Second Item
-          <a href="#">
-            <i></i>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>Third Item
-          <a href="#">
-            <i></i>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>Fourth Item
-          <a href="#">
-            <i></i>
-          </a>
-        </div>
-      </li>
-    </ul>
+    <!-- FULL WIDTH CAROUSEL -->
 
-    <!-- AVATAR CONTENT -->
-    <ul>
-      <li>
-        <i></i>
-        <span>John Doe</span>
-        <p>jdoe@gmail.com
-          <br> 555-555-5555
-        </p>
-        <a href="#">
-          <i></i>
-        </a>
-      </li>
-      <li>
-        <i></i>
-        <span>Brian Smith</span>
-        <p>bsmith@yahoo.com
-          <br> 444-444-4444
-        </p>
-        <a href="#">
-          <i></i>
-        </a>
-      </li>
-      <li>
-        <i></i>
-        <span>Jill Johnson</span>
-        <p>jill@gmail.com
-          <br> 333-333-3333
-        </p>
-        <a href="#">
-          <i></i>
-        </a>
-      </li>
-      <li>
-        <i></i>
-        <span>Kevin Wallace</span>
-        <p>kevin@yahoo.com
-          <br> 888-888-8888
-        </p>
-        <a href="#">
-          <i></i>
-        </a>
-      </li>
-    </ul>
+    <div class="carousel carousel-slider" data-indicators="true">
+      <a class="carousel-item" href="#one!">
+        <img src="img/img1.jpg">
+      </a>
+      <a class="carousel-item" href="#two!">
+        <img src="img/img2.jpg">
+      </a>
+      <a class="carousel-item" href="#three!">
+        <img src="img/img3.jpg">
+      </a>
+      <a class="carousel-item" href="#four!">
+        <img src="img/img4.jpg">
+      </a>
+      <a class="carousel-item" href="#five!">
+        <img src="img/img5.jpg">
+      </a>
+    </div>
 
-    <!-- BADGE IN DROPDOWN -->
+
+    <!-- CONTENT SLIDER -->
+    <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item red white-text" href="#one!">
+        <h2>Panel One</h2>
+        <p>This is panel one</p>
+        <div class="carousel-fixed-item center">
+          <a class="btn black">button</a>
+        </div>
+      </div>
+      <div class="carousel-item amber white-text" href="#two!">
+        <h2>Panel Two</h2>
+        <p>This is panel two</p>
+        <div class="carousel-fixed-item center">
+          <a class="btn black">button</a>
+        </div>
+      </div>
+      <div class="carousel-item green white-text" href="#three!">
+        <h2>Panel Three</h2>
+        <p>This is panel three</p>
+        <div class="carousel-fixed-item center">
+          <a class="btn black">button</a>
+        </div>
+      </div>
+      <div class="carousel-item blue white-text" href="#four!">
+        <h2>Panel Four</h2>
+        <p>This is panel four</p>
+        <div class="carousel-fixed-item center">
+          <a class="btn black">button</a>
+        </div>
+      </div>
+    </div>
 
 
     <!-- END HERE -->
@@ -261,7 +222,11 @@
 
       // JAVASCRIPT START HERE //
 
+      $('.carousel-simple').carousel();
 
+      $('.carousel-slider').carousel({
+        fullWidth: true
+      });
 
 
     });
