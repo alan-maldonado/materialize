@@ -36,7 +36,7 @@
               <a href="signup.html">Sign Up</a>
             </li>
             <li>
-              <a href="#" class="btn purple">Login</a>
+              <a href="#login-modal" class="btn purple modal-trigger">Login</a>
             </li>
             <li>
               <a href="https://facebook.com">
@@ -72,7 +72,7 @@
               <div class="divider"></div>
             </li>
             <li>
-              <a href="#" class="btn purple">Login</a>
+              <a href="#login-modal" class="btn purple modal-trigger">Login</a>
             </li>
           </ul>
         </div>
@@ -261,17 +261,42 @@
     </div>
   </footer>
 
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h4>Account Login</h4>
+      <p>Login to access your account dashboard</p>
+      <form>
+        <div class="input-field">
+          <input type="email" id="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password">
+          <label for="password">Password</label>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="modal-action modal-close btn grey">
+        <i class="fa fa-sync"></i> Reset Password</a>
+      <a href="#" class="modal-action modal-close btn purple">
+        <i class="fa fa-lock"></i> Log In</a>
+    </div>
+  </div>
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
-      // Init SideNav
       $('.button-collapse').sideNav();
 
       $('.carousel.carousel-slider').carousel({
         fullWidth: true
       });
+
+      $('.modal').modal();
     });
   </script>
 </body>
