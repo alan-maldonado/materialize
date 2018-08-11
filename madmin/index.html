@@ -80,7 +80,7 @@
       </div>
       <div class="col s12 m6 l3">
         <div class="card-panel center">
-          <i class="material-icons">mode_edit</i>
+          <i class="material-icons medium">mode_edit</i>
           <h5>Blog Posts</h5>
           <h3 class="count">105</h3>
           <div class="progress grey lighten-1">
@@ -90,7 +90,7 @@
       </div>
       <div class="col s12 m6 l3">
         <div class="card-panel blue lighten-1 white-text center">
-          <i class="material-icons">mode_comments</i>
+          <i class="material-icons medium">mode_comments</i>
           <h5>Comments</h5>
           <h3 class="count">1200</h3>
           <div class="progress grey lighten-1">
@@ -100,13 +100,50 @@
       </div>
       <div class="col s12 m6 l3">
         <div class="card-panel center">
-          <i class="material-icons">supervisor_account</i>
+          <i class="material-icons medium">supervisor_account</i>
           <h5>Users</h5>
           <h3 class="count">350</h3>
           <div class="progress grey lighten-1">
             <div class="determinate blue lighten-1" style="width: 10%;"></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Visitors -->
+  <section class="section section-visitors blue lighten-4">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card-panel">
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <ul class="collection width-header latest-commets">
+          <li class="collection-header"><h5>Latest Comments</h5></li>
+          <li class="collection-item avatar">
+            <img src="img/person1.jpg" class="circle">
+            <span class="title">John Doe</span>
+            <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam optio obcaecati suscipit ex voluptate quam eaque, blanditiis error sequi numquam voluptatem, ea sed consectetur magnam nostrum nisi quis aliquid cupiditate.</p>
+            <a href="#" class="approve green-text">Approve</a> |
+            <a href="#" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person2.jpg" class="circle">
+            <span class="title">Steve Smith</span>
+            <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam optio obcaecati suscipit ex voluptate quam eaque, blanditiis error sequi numquam voluptatem, ea sed consectetur magnam nostrum nisi quis aliquid cupiditate.</p>
+            <a href="#" class="approve green-text">Approve</a> |
+            <a href="#" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person3.jpg" class="circle">
+            <span class="title">Ellen Williams</span>
+            <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam optio obcaecati suscipit ex voluptate quam eaque, blanditiis error sequi numquam voluptatem, ea sed consectetur magnam nostrum nisi quis aliquid cupiditate.</p>
+            <a href="#" class="approve green-text">Approve</a> |
+            <a href="#" class="deny red-text">Deny</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -127,6 +164,8 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="js/canvas.js"></script>
   <script>
     $('.section').hide();
 
@@ -146,6 +185,16 @@
               $(this).text(Math.ceil(now));
             }
           });
+        });
+
+        $('.approve').click(function (e) {
+          Materialize.toast('Comment Approved', 3000);
+          e.preventDefault();
+        });
+
+        $('.deny').click(function (e) {
+          Materialize.toast('Comment Denied', 3000);
+          e.preventDefault();
         });
       });
     }, 1000)
