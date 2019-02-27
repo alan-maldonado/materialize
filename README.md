@@ -2,7 +2,7 @@
 
 ## Bizland
 
-![Bizland](./images/bsizland.png)
+![Bizland](./images/bizland.png)
 
 <hr />
 
