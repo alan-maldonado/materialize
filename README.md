@@ -1,31 +1,16 @@
 # ui-projects
 
-## Bizland
+## Sandboxes
 
-![Bizland](./images/bizland.png)
+| Materialize |
+| ----------- |
 
-<hr />
 
-## Galappear
+| <img src="./images/materialize-sandbox.png" alt="Materialize Sandbox" width="200" />
 
-![Galappear](./images/galappear.png)
+<br />
+## Materialize
 
-<hr />
-
-## Madmin
-
-![Madmin](./images/madmin.png)
-
-<hr />
-
-## Travelville
-
-![Madmin](./images/travelville.png)
-
-<hr />
-
-## Materialize Sandbox
-
-![Madmin](./images/materialize-sandbox.png)
-
-<hr />
+| Bizland                                                      | Travelville                                                          | Galappear                                                        | Madmin                                                     |
+| ------------------------------------------------------------ | -------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| <img src="./images/bizland.png" alt="Bizland" width="200" /> | <img src="./images/travelville.png" alt="travelville" width="200" /> | <img src="./images/galappear.png" alt="Galappear" width="200" /> | <img src="./images/madmin.png" alt="Madmin" width="200" /> |
