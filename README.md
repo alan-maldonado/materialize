@@ -6,9 +6,10 @@
 | ----------- |
 
 
-| <img src="./images/materialize-sandbox.png" alt="Materialize Sandbox" width="200" />
+<img src="./images/materialize-sandbox.png" alt="Materialize Sandbox" width="200" />
 
-<br />
+<hr />
+
 ## Materialize
 
 | Bizland                                                      | Travelville                                                          | Galappear                                                        | Madmin                                                     |
